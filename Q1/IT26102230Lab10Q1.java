@@ -7,7 +7,7 @@ public class IT26102230Lab10Q1{
 		Scanner lookfor = new Scanner(System.in);
 		
 		System.out.print("\nEnter the mark (0 - 100): ");
-		double mark = lookfor.nextDouble();
+		int mark = lookfor.nextInt();
 		
 		assert (mark >= 0) && (mark <=100): "Invalid Mark";
 		
@@ -15,12 +15,28 @@ public class IT26102230Lab10Q1{
 		
 		char grade = grading(mark);
 		
+		if(mark >= 75){
+			assert grade == 'A';
+		}
+		else if(mark >= 60){
+			assert grade == 'B';
+		}
+		else if(mark >= 50){
+			assert grade == 'C';
+		}
+		else if(mark >= 40){
+			assert grade == 'D';
+		}
+		else{
+			assert grade == 'F';
+		}
+		
 		System.out.println("The Grade for the Entered Mark is: " + grade);
 		
 		lookfor.close();
 	}
 	
-	public static char grading(double mark){
+	public static char grading(int mark){
 		
 		if(mark >= 75){
 			return 'A';
