@@ -16,19 +16,19 @@ public class IT26102230Lab10Q1{
 		char grade = grading(mark);
 		
 		if(mark >= 75){
-			assert grade == 'A';
+			assert grade == 'A': "Incorrect Grade Assigned";
 		}
 		else if(mark >= 60){
-			assert grade == 'B';
+			assert grade == 'B': "Incorrect Grade Assigned";
 		}
 		else if(mark >= 50){
-			assert grade == 'C';
+			assert grade == 'C': "Incorrect Grade Assigned";
 		}
 		else if(mark >= 40){
-			assert grade == 'D';
+			assert grade == 'D': "Incorrect Grade Assigned";
 		}
 		else{
-			assert grade == 'F';
+			assert grade == 'F': "Incorrect Grade Assigned";
 		}
 		
 		System.out.println("The Grade for the Entered Mark is: " + grade);
